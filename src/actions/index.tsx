@@ -43,7 +43,7 @@ export const deleteBook =
 			} else {
 				_id = id;
 			}
-			const response = await crossBook.delete(`/books/${_id}`);
+			await crossBook.delete(`/books/${_id}`);
 			dispatch({ type: 'DELETE_BOOK', payload: _id });
 			dispatch({ type: 'BOOK_SELECTED', payload: null });
 

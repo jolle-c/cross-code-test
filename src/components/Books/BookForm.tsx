@@ -31,26 +31,26 @@ class BookForm extends React.Component<BookProps> {
 						<form onSubmit={handleSubmit}>
 							<div>
 								<label>Titel</label>
-								<Field<string> name="title" component={TextInput} placeholder="Titel" />
+								<Field<string> name="title" component={TextInput} placeholder="Titel" required />
 							</div>
 							<div>
 								<label>Författare</label>
-								<Field<string> name="author" component={TextInput} placeholder="Efternamn, Förnamn" />
+								<Field<string> name="author" component={TextInput} placeholder="Efternamn, Förnamn" required />
 							</div>
 							<div>
 								<label>Genre</label>
-								<Field<string> name="genre" component={TextInput} placeholder="Genre" />
+								<Field<string> name="genre" component={TextInput} placeholder="Genre" required />
 							</div>
 							<div>
 								<label>Pris</label>
-								<Field<number> name="price" component={NumberInput} placeholder="Kostnad i $dollar" />
+								<Field<number> name="price" component={NumberInput} placeholder="Kostnad i $dollar" required />
 							</div>
 
 							<div>
 								<label>Beskrivning</label>
-								<Field name="description" component={TextAreaInput} placeholder="Beskrivning" />
+								<Field name="description" component={TextAreaInput} placeholder="Beskrivning" required />
 							</div>
-							<div className="buttons">
+							<div>
 								<button type="submit" disabled={submitting || pristine}>
 									Lägg till
 								</button>
