@@ -1,9 +1,9 @@
 export interface Book {
 	author: string;
-	description?: string;
-	genre?: string;
+	description: string;
+	genre: string;
 	id?: string;
-	price?: number;
+	price: number;
 	publish_date: string;
-	title?: string;
+	title: string;
 }

@@ -1,9 +1,9 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, ReactElement, useState } from 'react';
 import { connect } from 'react-redux';
 import format from 'date-fns/format';
-import { zonedTimeToUtc } from 'date-fns-tz';
 import { Book } from './Books';
 import { addBook, deleteBook, selectBook } from '../../actions';
+import BookForm from './BookForm';
 import classes from './Books.module.scss';
 
 type BookProps = {
@@ -12,28 +12,38 @@ type BookProps = {
 	deleteBook: any;
 	selectBook: any;
 };
+function ForceUpdate() {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const [value, setValue] = useState(0);
+	return () => setValue(value => value + 1);
+}
+
+let showForm: boolean = false;
 
 const BookDetail: FC<BookProps> = (props: BookProps): ReactElement => {
-	const data: Book = {
-		author: 'Lindgren, Astrid',
-		description:
-			'Emil, the title character, is a prankster who lives on a farm in the Lönneberga village of Småland, Sweden.',
-		genre: 'fiction',
-		price: 13.69,
-		publish_date: zonedTimeToUtc(new Date(), 'Europe/Stockholm').toISOString(),
-		title: 'Emil i Lönneberga',
-	};
+	const forceUpdate = ForceUpdate();
 
 	if (!props.book) {
 		return (
 			<div className={classes.bookDetail}>
-				<h1>Hallå där välj en bok</h1>
-				<button type="button" onClick={() => props.addBook(data)}>
-					eller skapa en ny
-				</button>
+				{(showForm && <BookForm />) || (
+					<div className={classes.bookDetail}>
+						<h1>Välj en bok</h1>
+						<button
+							type="button"
+							onClick={() => {
+								showForm = true;
+								forceUpdate();
+							}}
+						>
+							eller skapa en ny
+						</button>
+					</div>
+				)}
 			</div>
 		);
 	}
+	showForm = false;
 	return (
 		<div className={classes.bookDetail}>
 			<h1>{props.book.title}</h1>
@@ -54,7 +64,7 @@ const BookDetail: FC<BookProps> = (props: BookProps): ReactElement => {
 			<button type="button" onClick={() => props.selectBook(null)}>
 				Stäng
 			</button>
-			<button type="button" onClick={() => props.deleteBook({ id: props.book.id })}>
+			<button type="button" onClick={() => {showForm = false; props.deleteBook({ id: props.book.id })}}>
 				Radera
 			</button>
 		</div>

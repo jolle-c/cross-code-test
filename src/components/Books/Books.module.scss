@@ -23,8 +23,18 @@
 		margin: 1.2rem;
 		padding: 1.2rem;
 	}
-	a {
-		text-decoration: none;
-		color: rgb(24 103 103);
+}
+
+form {
+	label {
+		display: block;
+	}
+	input, textarea {
+		width: 100%;
+		margin-bottom: 1.2rem;
+		height: 2rem;
+	}
+	textarea {
+		min-height: 6rem;
 	}
 }
