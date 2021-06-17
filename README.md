@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Purpose
 
-Project ctreaded on request from [Cross Technology Solutions](https://cross-solutions.com) as a test to evaluate applicants skillset.
+Project created on request from [Cross Technology Solutions](https://cross-solutions.com) as a test to evaluate applicants skillset.
 
 Result can be viewed at [Demo Site](http://cross.carlestam.se/).
 
