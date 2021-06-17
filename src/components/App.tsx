@@ -2,6 +2,7 @@ import React from 'react';
 import BookDetail from './Books/BookDetail';
 import BookList from './Books/BookList';
 import classes from './App.module.scss';
+import { ObfuscateEmail } from 'utils';
 
 const App = () => {
 	return (
@@ -23,7 +24,7 @@ const App = () => {
 
 			<footer>
 				<p>
-					Kodtest för Cross Technology Solutions, kodad av Jolle Carlestam juni 2021.<br />
+					Kodtest för Cross Technology Solutions, kodad av <ObfuscateEmail emObf="am9sbGVAY2FybGVzdGFtLmNvbQ==" emText="Jolle Carlestam" /> juni 2021.<br />
 					Koden kan inspekteras på{' '}
 					<a href="https://github.com/jolle-c/cross-code-test" rel="noopener noreferrer" target="_blank">
 						https://github.com/jolle-c/cross-code-test

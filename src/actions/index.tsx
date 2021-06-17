@@ -1,6 +1,6 @@
 import crossBook from 'apis/crossBook';
 import { Book } from 'components/Books/Books';
-import { sort } from '../utils';
+import { sort } from 'utils';
 
 interface OneId {
 	id: string;

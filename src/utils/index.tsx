@@ -10,3 +10,12 @@ export const sort = (toSort: any[], key: string) =>
 		}
 		return 0;
 	});
+
+/**
+* @param {{ emObf: string, emText: string }}
+*/
+export const ObfuscateEmail = ({emObf, emText}: { emObf: string; emText: string; } ) => {
+
+   const decodedEm = `mailto:${atob(emObf)}`;
+   return <>{decodedEm && <a href={decodedEm}>{emText}</a>}</>;
+};
