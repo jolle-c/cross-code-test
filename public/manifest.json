@@ -1,21 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Cross App",
+  "name": "Cross Code Test App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "cropped-Cross-logo-mini-32x32.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "crosstechlogo.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "300x70"
     }
   ],
   "start_url": ".",

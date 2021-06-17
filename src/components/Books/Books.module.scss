@@ -1,0 +1,12 @@
+.bookList {
+	list-style-type: none;
+	padding-inline-start: unset;
+	li {
+		cursor: pointer;
+		display: flex;
+		margin-bottom: 1.2rem;
+		img {
+			margin-right: 1.2rem;
+		}
+	}
+}
