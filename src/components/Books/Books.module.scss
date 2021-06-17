@@ -10,3 +10,21 @@
 		}
 	}
 }
+
+.bookDetail {
+	margin-top: 1.2rem;
+	.genre {
+		text-transform: capitalize;
+	}
+	button {
+		background-color: rgb(190 245 245);
+		border-radius: 0.6rem;
+		border: 1px solid lightgray;
+		margin: 1.2rem;
+		padding: 1.2rem;
+	}
+	a {
+		text-decoration: none;
+		color: rgb(24 103 103);
+	}
+}

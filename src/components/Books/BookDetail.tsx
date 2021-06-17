@@ -26,7 +26,7 @@ const BookDetail: FC<BookProps> = (props: BookProps): ReactElement => {
 
 	if (!props.book) {
 		return (
-			<div className={classes.content}>
+			<div className={classes.bookDetail}>
 				<h1>Hallå där välj en bok</h1>
 				<button type="button" onClick={() => props.addBook(data)}>
 					eller skapa en ny
@@ -35,21 +35,22 @@ const BookDetail: FC<BookProps> = (props: BookProps): ReactElement => {
 		);
 	}
 	return (
-		<div>
+		<div className={classes.bookDetail}>
 			<h1>{props.book.title}</h1>
 			<h2>{props.book.author}</h2>
-			<p>
-				{props.book.description}
-				<br />
-				<dl>
-					<dt>Publicerad</dt>
-					<dd><em>{format(new Date(props.book.publish_date), 'd MMM yyyy')}</em></dd>
-					<dt>Genre</dt>
-					<dd><strong>{props.book.genre}</strong></dd>
-					<dt>Kostnad</dt>
-					<dd>{props.book.price}</dd>
-				</dl>
-			</p>
+			<p>{props.book.description}</p>
+			<dl>
+				<dt>Publicerad</dt>
+				<dd>
+					<em>{format(new Date(props.book.publish_date), 'd MMM yyyy')}</em>
+				</dd>
+				<dt>Genre</dt>
+				<dd>
+					<strong className={classes.genre}>{props.book.genre}</strong>
+				</dd>
+				<dt>Kostnad</dt>
+				<dd>{props.book.price}</dd>
+			</dl>
 			<button type="button" onClick={() => props.selectBook(null)}>
 				Stäng
 			</button>

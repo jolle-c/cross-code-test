@@ -5,6 +5,7 @@
 	max-width: 90rem;
 	padding: 1.2rem;
 	header {
+		align-items: center;
 		background-color: rgb(190 245 245);
 		display: flex;
 		margin: -1.2rem;
@@ -14,10 +15,14 @@
 	}
 	section {
 		display: flex;
+		article {
+			margin-top: 1.2rem;
+		}
 	}
 	.menu {
-		border-right: 1px solid lightgrey;
+		border-right: 1px solid rgb(211 211 211);
 		margin-right: 2.4rem;
+		margin-top: 1.2rem;
 		max-width: 20rem;
 		min-width: 20rem;
 	}
