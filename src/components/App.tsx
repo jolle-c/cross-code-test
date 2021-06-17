@@ -22,9 +22,16 @@ const App = () => {
 			</section>
 
 			<footer>
-				<p>Kodtest för Cross Technology Solutions, kodad av Jolle Carlestam juni 2021. Koden kan inspekteras på <a href="https://github.com/jolle-c/cross-code-test" rel="noopener noreferrer" target="_blank">https://github.com/jolle-c/cross-code-test</a></p>
+				<p>
+					Kodtest för Cross Technology Solutions, kodad av Jolle Carlestam juni 2021.<br />
+					Koden kan inspekteras på{' '}
+					<a href="https://github.com/jolle-c/cross-code-test" rel="noopener noreferrer" target="_blank">
+						https://github.com/jolle-c/cross-code-test
+					</a>
+					<br />
+					<small>Don't be cross. Be Cross!</small>
+				</p>
 			</footer>
-
 		</div>
 	);
 };
